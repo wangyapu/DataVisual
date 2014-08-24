@@ -37,8 +37,16 @@ DataVisual
 
 6、数据统计——条形图
 
- ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/统计信息—条形图.png)
+ ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/统计信息-条形图.png)
  
   数据统计——折线图
   
-   ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/统计信息—折线图.png)
+ ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/统计信息-折线图.png)
+ 
+ 数据统计——散点图
+  
+ ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/散点图.png)
+ 
+ 数据统计——箱线图
+  
+ ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/箱线图.png)
