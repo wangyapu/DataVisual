@@ -65,3 +65,31 @@ DataVisual
 
 ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/平行坐标筛选.png)
 
+8、决策树、概率预测、roc曲线评价分类器性能
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/决策树分析参数.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/可交互的决策树1.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/可交互的决策树2.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/可交互的决策树3.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/概率预测.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/分类器性能评估.png)
+
+9、社会网络——网络图、弦图
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/网络图.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/网络图选择子集.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/弦图.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/弦图选择子集.png)
+
+
+
+
+
