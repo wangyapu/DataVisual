@@ -50,3 +50,18 @@ DataVisual
  数据统计——箱线图
   
  ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/箱线图.png)
+ 
+7、聚类分析、散点矩阵、平行坐标、饼形图
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/聚类分析参数.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/各簇聚类数目.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/散点矩阵.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/图形刷子筛选散点.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/平行坐标图.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/平行坐标筛选.png)
+
