@@ -95,9 +95,17 @@ DataVisual
 
 ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/关联规则表.png)
 
-![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/多对多关联规则.png)
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/多对多的关联规则.png)
 
 ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/单对单规则二维矩阵.png)
+
+11、屏幕截图
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/屏幕截图.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/截图预览.png)
+
+
 
 
 
