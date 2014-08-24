@@ -10,3 +10,23 @@ DataVisual
 1、上传数据集
 
  ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/上传数据集.png)
+ 
+2、用户指南
+
+ ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/用户指南.png)
+ 
+3、文件型数据读取
+
+ ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/文件型数据读取.png)
+ 
+4、数据库数据读取
+
+ ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/数据库数据读取.png)
+ 
+5、数据清洗——缺失值处理
+
+ ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/缺失值处理.png)
+ 
+   缺失值预览——可以任意剔除和修改缺失值
+   
+ ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/缺失值预览.png)
