@@ -89,6 +89,16 @@ DataVisual
 
 ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/弦图选择子集.png)
 
+10、关联规则表、平行坐标、二维矩阵
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/关联规则分析参数.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/关联规则表.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/多对多关联规则.png)
+
+![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/单对单规则二维矩阵.png)
+
 
 
 
