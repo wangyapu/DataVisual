@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="sss" extends="json-default">
+		<!--注释	-->
+		<action name="imgtos" class="com.img.base64.MyTest" >
+			<result name="success" type="json"></result>			
+		</action>
+		
+		<action name="downloadImg" class="com.img.base64.MyTest" method="DownloadImg">
+			<result name="success" type="chain">imgdownload</result>
+		</action>
+		<!-- chain:用来处理Action链,被跳转的action中仍能获取上个页面的值,如request信息 -->
+		<!--文件下载 -->
+	    <action name="imgdownload" class="com.img.base64.MyTest" method="getPc">
+		    <!-- 使用StreamResult结果类型 -->
+		    <result name="success" type="stream">
+			<!-- 指定下载文件的文件位置，它的默认值是inputStream，如果在Action中用于读取下载文件内容的属性名是inputName，那么这里可以省略这个参数的配置 -->
+			<param  name="inputName">downloadImage</param>
+			<param name="contentDisposition">attachment;filename=${#request.fileN}</param>
+			<!-- 指定下载文件的缓冲大小 -->
+			<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		
+		<!--裁剪保存	-->
+		<action name="imgtosCrop" class="com.img.base64.MyTest" method="excuteCrop">
+			<result name="success" type="json"></result>			
+		</action>
+		
+		<action name="convertType" class="com.img.base64.ConvertFileType" method="DownloadImg">
+			<result name="success" type="chain">fileType</result>
+		</action>
+		<!-- chain:用来处理Action链,被跳转的action中仍能获取上个页面的值,如request信息 -->
+		<!--文件下载 -->
+	    <action name="fileType" class="com.img.base64.ConvertFileType" method="getPc">
+		    <!-- 使用StreamResult结果类型 -->
+		    <result name="success" type="stream">
+			<!-- 指定下载文件的文件位置，它的默认值是inputStream，如果在Action中用于读取下载文件内容的属性名是inputName，那么这里可以省略这个参数的配置 -->
+			<param  name="inputName">inputStream</param>
+			<param name="contentDisposition">attachment;filename=${#request.fileN}</param>
+			<!-- 指定下载文件的缓冲大小 -->
+			<param name="bufferSize">4096</param>
+			</result>
+		</action>
+
+	</package>
+	
+</struts>    

@@ -1,0 +1,229 @@
+@CHARSET "utf-8";
+.tabmain {
+	width: 616px;
+	height: 384px;
+	margin: 150px auto;
+	background: #F3F3F3;
+	border: 1px solid #F3F3F3;
+}
+
+#outerWrap2 {
+	position: relative;
+	z-index: 999;
+	margin: 0;
+	padding: 0;
+}
+
+.outerWrap {
+	width:50px;
+	/*height: 384px;
+	margin: 150px auto;*/
+	background: #F3F3F3;
+	border: 1px solid #72C9FA;
+	position: absolute;
+	/*right: -52px;*/
+	right: 0px;
+	top: 72px;
+	z-index: 999;
+	display:inline-block;
+}
+
+.blueline {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 3px;
+	height: 48px;
+	background: #1d9fd3;
+	overflow: hidden;
+}
+
+.tabGroup {
+	float: left;
+	width: 50px;
+	height: auto;
+	z-index: 3;
+}
+
+ol, ul, li {
+	list-style: none outside;
+}
+
+.tabGroup li.selectedTab {
+	/*padding-left: 10px;*/
+	padding-left: 3px;
+	background: #fff;
+	color: #1d9fd3;
+	font-weight: bold;
+}
+
+.tabGroup li {
+	height: 48px;
+	line-height: 48px;
+	/*padding-left: 8px;*/
+	padding-left: 3px;
+	text-align: left;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	font-size: 14px;
+	font-family: 'Microsoft yahei';
+	color: #666;
+}
+
+.div_image{
+	width: 41px;
+	height: 42px;
+	padding-top: 3px;
+	padding-left: 4px;
+	border:0px solid red;
+	background: url(../images/column.png);
+	-moz-background-size:38px 39px; /* 老版本的 Firefox */
+	background-size:38px 39px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+
+#pie{
+	background:url(../images/tabImg/pie.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+
+#pie:hover{
+	background:url(../images/tabImg/pie_hover.png);	
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+
+#bar{
+	background:url(../images/tabImg/barchart.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+#bar:hover{
+	background:url(../images/tabImg/barchart_hover.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+
+#table{
+	background:url(../images/tabImg/table.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+#table:hover{
+	background:url(../images/tabImg/table_hover.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+
+#gplotmatrix{
+	background:url(../images/tabImg/gplotmatrix.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+#gplotmatrix:hover{
+	background:url(../images/tabImg/gplotmatrix_hover.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+
+#parallelgraph{
+	background:url(../images/tabImg/parallel.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+#parallelgraph:hover{
+	background:url(../images/tabImg/parallel_hover.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+
+#matrix{
+	background:url(../images/tabImg/matrix.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+#matrix:hover{
+	background:url(../images/tabImg/matrix_hover.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+
+#dtree{
+	background:url(../images/tabImg/tree.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+#dtree:hover{
+	background:url(../images/tabImg/tree_hover.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+
+#curvegraph{
+	background:url(../images/tabImg/curve.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+#curvegraph:hover{
+	background:url(../images/tabImg/curve_hover.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+
+#digraph{
+	background:url(../images/tabImg/digraph.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+#digraph:hover{
+	background:url(../images/tabImg/digraph_hover.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+
+#socialnet{
+	background:url(../images/tabImg/socialnet.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+#socialnet:hover{
+	background:url(../images/tabImg/socialnet_hover.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+
+#chordgragh{
+	background:url(../images/tabImg/chord.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}
+#chordgragh:hover{
+	background:url(../images/tabImg/chord_hover.png);
+	background-size:38px 38px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+}

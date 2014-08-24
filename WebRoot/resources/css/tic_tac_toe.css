@@ -1,0 +1,45 @@
+@CHARSET "utf-8";
+
+table.tic_tac_toe {
+	border-collapse:collapse;
+	}
+table.tic_tac_toe td {
+	border-right: 1px solid #99CCCC; /* create the grid of table cells */
+	border-bottom: 1px solid #99CCCC;
+	}
+table.tic_tac_toe tr:last-child td {
+	border-bottom: 0;
+	}
+table.tic_tac_toe td:last-child {
+	border-right:0;
+	}                  
+table.tic_tac_toe th { 
+/* labels column (and headings until we override below) */
+		border-right:3px solid #99CCCC;   
+		border-bottom: 1px solid #99CCCC;
+		width: 3em;       
+		font-size: 15px;
+		font-family: Arial;
+		vertical-align: center;
+		padding: 3px 3px;          
+		text-align: center;            
+		line-height: 33px;
+	}               
+table.tic_tac_toe tr:last-child th { /* last cell of labels  column */
+		border-bottom:0;
+	}
+table.tic_tac_toe tr:last-child th { /* last cell of labels column */
+		border-bottom:0;
+	}
+table.tic_tac_toe th[scope="col"] { /* headings row */     
+	/* colors top row of cells - IDWIMIE 6 - previous rule applies to IE6 */
+	border-right: 1px solid #99CCCC;
+	border-bottom :3px solid #99CCCC;
+	}
+table.tic_tac_toe th[scope="col"]:first-child { /* headings row */
+/* first cell of headings row */
+	border-right:3px solid #99CCCC;
+	}
+table.tic_tac_toe th[scope="col"]:last-child { /* headings row */
+	border-right:0;
+	}

@@ -1,0 +1,88 @@
+table {
+	border-collapse: collapse;
+	border: 1px solid rgb(111,111,111);
+	font: normal 14px verdana, arial, helvetica, sans-serif;
+	color: #ffffff;
+}
+
+.col0 {
+	background-color: rgb(247,247,247);
+}
+
+.col1 {
+	background-color: rgb(247,247,247);
+}
+
+.col2 {
+	background-color: rgb(247,247,247);
+}
+
+thead tr.shuoming th{
+	text-align: right;
+	padding-top:0.2em;
+	padding-right: 2em;
+	background: #f7f7f7;
+	color: #03476F;
+	font-family: sans-serif;
+	vertical-align: middle;
+	height: 20px;
+}
+
+td,th {
+	border: 1px inset  rgb(111,111,111);
+	padding: .1em;
+	color: #333333;
+	height: 20px;
+}
+
+thead th,tfoot th {
+	font: bold 11px verdana, arial, helvetica, sans-serif;
+	border: 1px solid  rgb(111,111,111);
+	text-align: center;
+	background: rgb(247,247,247);
+	color: #333333;
+	padding-top: 3px;
+}
+
+tbody th,tbody td {
+	vertical-align: middle;
+	text-align: center;
+}
+
+thead th {
+	font-size:14px;	
+}
+
+tbody th {
+	font-size:14px;
+	color:#333333;
+	font-family: ºÚÌå,verdana, arial, helvetica, sans-serif;
+}
+
+tfoot td {
+	height:20px;
+	font-size:14px;
+	border: 1px solid  rgb(111,111,111);
+	background:  rgb(247,247,247);
+	padding-top: 3px;
+	color: #333333;
+}
+
+tfoot th{
+	height: 20px;	
+	font-size:14px;
+}
+
+tbody tr.odd td {
+	background: rgb(252,252,252);
+}
+
+.odd{
+	background: rgb(252,252,252);	
+}
+
+tbody tr:hover td{
+	background: rgba(132, 194, 255, 0.52);
+	border: 1px solid #ffffff;
+	color: #FFFFFF;
+}

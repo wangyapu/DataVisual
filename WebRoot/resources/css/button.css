@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+.button, .button:visited {	
+	display: inline-block; 
+	padding: 5px 10px 6px; 
+	color: #fff; 
+	text-decoration: none;
+	-moz-border-radius: 6px; 
+	-webkit-border-radius: 6px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer；
+	
+}
+
+.button:active{ 
+	top: 1px; 
+}
+.button, .button:visited{ 
+	font-size: 13px; 
+  	line-height: 1; 
+  	text-shadow:1px 1px 1px #777777;
+}										  
+
+.blue1.button, .blue1.button:visited{       
+	font-size: 12px;
+	padding: 7px 11px 6px;
+	box-shadow: 0 1px 1px #8fcaee inset,0 -1px 0 #497897 inset,0 -1px 2px #8fcaee inset;
+	background-color: #2981e4; 
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(66,164,224,0.8)), to(rgba(46,136,192,0.8)));
+	background: -moz-linear-gradient(top,  rgba(66,164,224,0.8),  rgba(46,136,192,0.8));
+	background: -o-linear-gradient(top,  rgba(66,164,224,0.8),  rgba(46,136,192,0.8));
+}
+.blue1.button:hover{ 
+	background:#4097ce;
+	text-shadow:1px 1px 1px #333;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(112,191,239,0.8)), to(rgba(64,151,206,0.8)));
+	background: -moz-linear-gradient(top,  rgba(112,191,239,0.8),  rgba(64,151,206,0.8));
+	background: -o-linear-gradient(top,  rgba(112,191,239,0.8),  rgba(64,151,206,0.8));
+}    
+
+
+
+.blue {
+	font-size:12px;
+	color: #f2f2f2;
+	text-shadow:1px 1px 1px #333;
+	box-shadow: 0 1px 1px #8fcaee inset,0 -1px 0 #497897 inset,0 -1px 2px #8fcaee inset;
+	padding: 3px 10px;
+	border-radius: 5px;  
+	border: solid 1px #0798d0;
+	background:#2e88c0;
+	background: -webkit-gradient(linear, left top, left bottom, from(#42a4e0), to(#2e88c0));
+	background: -moz-linear-gradient(top,  #42a4e0,  #2e88c0);
+	background: -o-linear-gradient(top,  #42a4e0,  #2e88c0);
+}
+.blue:hover {
+	background:#4097ce;
+	background: -webkit-gradient(linear, left top, left bottom, from(#70bfef), to(#4097ce));
+	background: -moz-linear-gradient(top,  #70bfef,  #4097ce);
+	background: -o-linear-gradient(top,  #70bfef,  #4097ce);
+}
+.blue:active {
+	top: 1px; 
+	background:#1976b1;
+	background: -webkit-gradient(linear, left top, left bottom, from(#1a71a8), to(#1976b1));
+	background: -moz-linear-gradient(top,  #1a71a8,  #1976b1);
+	background: -o-linear-gradient(top,  #1a71a8,  #1976b1);
+}
+

@@ -1,0 +1,207 @@
+@CHARSET "utf-8";
+.contenttitle{
+	font-size:22px;
+	font-family:"微软雅黑";	
+	color:#4C8F28;
+	padding-left: 12px;
+	padding-top: 16px;
+	padding-bottom:14px;
+}
+
+.box-header{
+	margin:0 auto;
+	width:85%;	
+	border-bottom: 1px dotted #e2e2e2;
+	margin-bottom:12px;
+}
+
+.table{
+	border: 1px solid #ddd;
+	width: 85%;
+	margin-bottom: 20px;
+	margin:0 auto ;
+}
+
+.tablestyle{
+	margin:0 auto;
+	width:90%;	
+}
+
+
+.theadstyle{
+	color:#707070;
+	background-image: -moz-linear-gradient(top,rgb(248,248,248) 0%,rgb(237,237,237) 100%);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgb(248,248,248)),color-stop(100%,rgb(237,237,237)));
+	background-image: -webkit-linear-gradient(top,rgb(248,248,248) 0%,rgb(237,237,237) 100%);
+	background-image: -o-linear-gradient(top,rgb(248,248,248) 0%,rgb(237,237,237) 100%);
+	background-image: -ms-linear-gradient(top,rgb(248,248,248) 0%,rgb(237,237,237) 100%);
+	background-image: linear-gradient(top,rgb(248,248,248) 0%,rgb(237,237,237) 100%);
+}
+
+
+.table thead tr th{
+	text-align: left;	
+	border-color:#ddd;
+	font-weight:bold;
+	vertical-align:center;
+}
+
+.table > thead > tr > th{
+	color:#707070;
+    padding:8px;
+	line-height: 1.4;
+	border: 1px solid #D3D8DE;
+	border-bottom-width: 2px;
+	background-image: -moz-linear-gradient(top,rgb(248,251,255) 0%,rgb(224, 238, 253) 100%);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgb(248,251,255)),color-stop(100%,rgb(224, 238, 253)));
+	background-image: -webkit-linear-gradient(top,rgb(248,251,255) 0%,rgb(224, 238, 253) 100%);
+	background-image: -o-linear-gradient(top,rgb(248,251,255) 0%,rgb(224, 238, 253) 100%);
+	background-image: -ms-linear-gradient(top,rgb(248,251,255) 0%,rgb(224, 238, 253) 100%);
+	background-image: linear-gradient(top,rgb(248,251,255) 0%,rgb(224, 238, 253) 100%);
+}
+
+.table tbody tr td{
+	text-align:left;
+	vertical-align:center;	
+	padding:8px;
+	line-height: 1.4;
+	border: 1px solid #D3D8DE;
+	font-size:12px;
+}
+
+.table>tbody>tr:hover>td {
+	color:#333333;
+	background-color: #f0f7fc;
+}
+
+.pagestyle{
+	text-align:center;
+	font-size:14px;
+}
+.pagestyle a{
+	color:#000;
+	text-decoration:none;
+}
+.pagestyle a:hover{
+	color:#3DA0D1;
+}
+
+.tabletitle{
+	width:85%;
+	margin:0 auto;
+	font-size:21px;
+	color: #368DD9;	
+	text-align:center;
+	font-family:"微软雅黑";
+	padding: 2px 0px 15px;
+}
+
+.exporttable{
+	width:85%;
+	margin:0 auto;
+	font-size:17px;	
+	text-align:right;
+	font-family:"微软雅黑";
+}
+
+.exporttable a{
+	font-size:17px;
+	color: #347012;
+	padding-left:2px;
+}
+
+.exporttable a:hover{
+	color:#000;
+}
+
+.exportgraph{
+	width:85%;
+	margin:0 auto;
+	font-size:16px;	
+	text-align:right;
+	font-family:"微软雅黑";
+}
+
+.exportgraph a{
+	font-size:16px;
+	color: #347012;
+	padding-left:2px;    
+	
+}
+
+.exportgraph a:hover{
+	color:#000;
+}
+
+.exportgraph1{
+	display:inline-block;
+	font-size:16px;	
+	text-indent:20px;
+	font-family:"微软雅黑";
+	background:url(../images/exportgraph.png);
+	background-repeat:no-repeat;
+	position:absolute;
+	right:2px;
+}
+
+.exportgraph1:hover{
+	color: #347012;
+}
+
+.printgraph{
+	display:inline-block;
+	font-size:16px;	
+	text-indent:20px;
+	font-family:"微软雅黑";     
+	background:url(../images/print.png);
+	background-repeat:no-repeat;  
+	position:absolute;     
+	right:100px;            
+}
+
+.printgraph:hover{
+	color: #347012;
+}
+
+.more{
+	width: 85%;
+	margin: 0 auto;
+	text-align:right;
+	margin-top:20px;
+}
+
+.more a{
+	font-size:15px;
+	color: #8F89A8;    
+	font-family:"微软雅黑";
+	padding-left:2px;
+}
+
+.more a:hover{
+	color:#3DA0D1;
+}
+
+.curvegraph{
+	width:85%;
+	margin:0 auto;
+	font-size:23px;
+	color: #368DD9;	
+	text-align:center;
+	font-family:"微软雅黑";
+	padding: 2px 0px 15px;
+}
+
+.illustratestyle{
+	font-size: 18px;
+	font-family: "微软雅黑";
+	text-align: center;
+}
+
+.graphstyle{
+	text-align:center;	
+}
+
+
+
+	
+

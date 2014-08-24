@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+ 
+<struts>
+<constant name="struts.multipart.saveDir" value="d:/temp" />
+<constant name="struts.multipart.maxSize" value="10000000000"/>
+
+<package name="datasource_zyc" extends="struts-default">  
+ 
+   <action name="datasetUpload" class="com.dv.action.DatasetUploadAction">
+   	  <param name="savaPath">/datasets</param>
+      <result name="success">/dataSource/datasetUpload.jsp</result>
+   </action>
+   
+   <action name="upload" class="com.dv.action.DataSourceAction" method="upload">
+      <result name="success" type="chain">fileDatasetList</result>
+   </action>
+   
+   <action name="fileDatasetList" class="com.dv.action.DataSourceAction" method="fileDatasetList">
+      <result name="success">/dataSource/fileDatasetList.jsp</result>
+   </action>
+   
+   <action name="networkfileList" class="com.dv.action.DataSourceAction" method="fileDatasetList">
+      <result name="success">/datamining/network.jsp</result>
+   </action>
+   
+   <action name="dataListShow" class="com.dv.action.DataSourceAction" method="dataListShow">
+      <result name="success">/dataSource/dataDetailshow.jsp</result>
+   </action>
+   
+   <!-- 配置struts上传社会网络头像的Action -->  
+   <action name="uploadImage" class="com.dv.action.NetWork" method="uploadHeadImg">  
+	  <!-- 动态设置Action的属性值 -->  
+	  <param name="savePath">/resources/headimg</param>
+	  <!-- 配置Struts2默认的视图页面 -->  
+	  <result>/login.jsp</result>  
+   </action> 
+   
+   <!-- 配置异步上传社会网络头像的Action -->  
+   <action name="imgupload" class="com.dv.action.UploadImgAction">
+   	  <param name="savaPath">/resources/headimg</param>
+      <result name="success">/index.jsp</result>
+   </action>
+   
+</package> 
+
+<package name="dataSourceJson" extends="json-default">
+    <action name="readFileDatasetJson" class="com.dv.action.DataSourceAction" method="readFileDataset" >
+      	<result name="success" type="json">
+      		<param name="includeProperties">fddBeans.*,totalrow,datashow.*,datacolnames.*</param>   
+      	</result>
+    </action>
+    
+    <action name="allDbTypeJson" class="com.dv.action.DataSourceAction" method="allDbType" >
+      	<result name="success" type="json">
+      		<param name="root">allDbtype</param>   
+      	</result>
+    </action>
+    
+    <action name="getDbNameJson" class="com.dv.action.DataSourceAction" method="getDbName" >
+      	<result name="success" type="json">
+      		<param name="root">allDbtype</param>   
+      	</result>
+    </action>
+    
+    <action name="getTableNameJson" class="com.dv.action.DataSourceAction" method="getTableName" >
+      	<result name="success" type="json">
+      		<param name="root">dbdatasetList</param>   
+      	</result>
+    </action>
+    
+    <action name="readDbDatasetJson" class="com.dv.action.DataSourceAction" method="readDbDataset" >
+      	<result name="success" type="json">
+      		<param name="includeProperties">fddBeans.*,totalrow,datashow.*,datacolnames.*</param>   
+      	</result>
+    </action>
+    
+</package>
+</struts>

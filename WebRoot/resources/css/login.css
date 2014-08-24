@@ -1,0 +1,234 @@
+@CHARSET "utf-8";
+body {
+		position:fixed;
+		top:0px;
+		width:100%;
+		/*background: url(resources/images/home.jpg) repeat-x 0px 0px;*/
+		background: url(../images/login/home.jpg);    
+		-moz-background-size:cover; /* 老版本的 Firefox */
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-origin:content-box;
+		border-bottom: 1px solid white;
+		z-index: 1;       
+	}  
+	.circle{
+		position:absolute;
+		top:50px;
+		width:580px;    
+		height:748px;
+		background: url(../images/login/circlebg.png);
+		-moz-background-size:cover; /* 老版本的 Firefox */
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-origin:content-box;
+		
+		z-index: 1;
+	}
+	#dataupload{
+		width:81px;
+		height:81px;
+		position:absolute; 
+		background: url(../images/login/uploadcircle.png);
+		top:480px;
+		left:180px;
+	}
+	#dataupload:hover{
+		background: url(../images/login/uploadcircle_hover.png);
+		-moz-background-size: 81px 81px;
+		background-size: 81px 81px;
+		background-repeat: no-repeat;
+		background-origin: content-box;
+		cursor: pointer;
+	}
+	
+	#dataselect{
+		width:113px;
+		height:113px;
+		position:absolute; 
+		background: url(../images/login/selectcircle.png);
+		top:310px;
+		left:293px;
+	}
+	#dataselect:hover{
+		background: url(../images/login/selectcircle_hover.png);
+		-moz-background-size: 113px 113px;
+		background-size: 113px 113px;
+		background-repeat: no-repeat;
+		background-origin: content-box;
+		cursor: pointer;
+	}
+	
+	#datadeal{
+		width:70px;
+		height:70px;
+		position:absolute; 
+		background: url(../images/login/dealcircle.png);
+		top:130px;
+		left:125px;
+	}
+	#datadeal:hover{
+		background: url(../images/login/dealcircle_hover.png);
+		-moz-background-size: 70px 70px;
+		background-size: 70px 70px;
+		background-repeat: no-repeat;
+		background-origin: content-box;
+		cursor: pointer;
+	}
+	
+	#datamining{
+		width:77px;
+		height:77px;
+		position:absolute; 
+		background: url(../images/login/miningcircle.png);
+		top:63px;
+		left:409px;
+	}
+	#datamining:hover{
+		background: url(../images/login/miningcircle_hover.png);
+		-moz-background-size: 77px 77px;
+		background-size: 77px 77px;      
+		background-repeat: no-repeat;
+		background-origin: content-box;
+		cursor: pointer;
+	}
+	
+	/**登录**/	
+	#line_login{
+		width:2px;
+		background: rgba(158, 199, 245, 0.4);
+		height:35px;
+		position: absolute;
+		right: 42px;       
+		top: -10px;
+		z-index: 9999;
+	}
+	
+	#line_login:after
+	{ 
+		content:'';
+	}
+	
+	#logo_login{
+		width: 18px;
+		height: 43px;
+		padding: 5px;          
+		position: absolute;
+		right: 29px;
+		top: 25px;
+		z-index: 9999;       
+		cursor: pointer;
+		background: rgba(158, 199, 245, 0.4);
+		border-radius: 7px;    
+		font-size: 15px;
+		font-family: "微软雅黑";
+		color: #595959;
+	}
+	
+	#logo_body{
+		position: absolute;
+		right: 37px;
+		margin-right: 20px;
+		top: -360px;
+		z-index: 9999;
+		width: 258px;
+		height: 289px;
+		border-radius: 0 0 15px 15px;
+		
+	}
+	
+	.logincontent{
+		position: absolute;
+		top: 27px;
+		left: 0px;
+		height: 250px;            
+		width: 246px;
+		line-height: 50px;
+		border-radius: 15px;
+		/* border: 8px solid rgba(255, 255, 255, 0.23); */
+		/*box-shadow: 0 5px 0 rgba(255, 255, 255, 0.22);*/
+		box-shadow: 0 2px 2px rgba(158, 199, 245, 0.4), 0 1px 5px rgba(158, 199, 245, 0.4), 0 0 0 12px rgba(158, 199, 245, 0.4);
+		background: rgba(255, 255, 255, 0.9);
+		background:url(../images/login/loginTitleBg.png);                 
+	}
+	.userDiv{
+		width: 220px;
+		height: 30px;
+		position: absolute;
+		top: 78px;
+		left: 10px;
+	}
+	.user{
+		display:inline-block;
+		width:28px;
+		height:26px;
+		position: relative;
+		top: -2px;
+		left: 5px;
+		background:url(../images/login/userIcon.png);
+		background-repeat:no-repeat;
+	}
+	.userInput{
+		width: 155px;
+		height: 25px;
+		margin-left: 10px;
+		position: relative;
+		top: -12px;
+	}
+	
+	.passwordDiv{
+		width: 220px;
+		height: 30px;
+		position: absolute;
+		top: 128px;
+		left: 10px;
+	}
+	.password{
+		display:inline-block;
+		width:28px;
+		height:26px;
+		position: relative;
+		top: -2px;
+		left: 5px;
+		background:url(../images/login/passwordIcon.png);
+		background-repeat:no-repeat;
+	}
+	.passwordInput{
+		width: 155px;     
+		height: 25px;       
+		margin-left: 10px;
+		position: relative;
+		top: -12px;
+	}
+	.login{      
+		position:absolute;    
+		top: 200px;
+		left: 30px;
+		width: 191px;
+		height: 28px;
+	}
+	
+	.loginTitle{
+		font-size: 16px;
+		font-weight: bold;
+		font-family: "微软雅黑";
+		position: absolute;
+		top: 4px;
+		left: 34px;
+		color:#368DD9;
+	}
+	.loginTitleDiv{
+		width: 246px;
+		height: 53px;
+		border-radius: 15px 15px 2px 2px;
+		background: -webkit-linear-gradient(bottom,rgba(54, 141, 217, 0.11),rgba(54, 141, 217, 0));
+		background: -moz-linear-gradient(bottom,rgba(54, 141, 217, 0.11),rgba(54, 141, 217, 0));
+		background: -o-linear-gradient(bottom,rgba(54, 141, 217, 0.11),rgba(54, 141, 217, 0));
+		box-shadow: 0 5px 0px rgba(54, 141, 217, 0.2);
+		/*background-image:url(../images/login/loginTitleBg.png);     */ 
+	}
+	
+	
+
+	
+	

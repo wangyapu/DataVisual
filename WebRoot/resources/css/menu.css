@@ -1,0 +1,224 @@
+@CHARSET "utf-8";
+
+.section{
+	position: relative;
+}
+
+ul, menu, dir {
+	display: block;
+	list-style-type: disc;
+	/*-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;*/
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	/*-webkit-padding-start: 40px;*/
+}
+
+ul.nav-h:after {
+	content: "\00a0";
+	display: block;
+	height: 0;
+	font: 0/0 serif;
+	clear: both;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+#header ul.nav-h{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: auto;
+	z-index: 100;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	
+	background: #3193c0;
+	background-image: url(css-gradients-fallback/main-menu-bg.png);
+	background-image: -moz-linear-gradient(top,#4cb1e0 0%,#1675a1 100%);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#4cb1e0),color-stop(100%,#1675a1));
+	background-image: -webkit-linear-gradient(top,#4cb1e0 0%,#1675a1 100%);
+	background-image: -o-linear-gradient(top,#4cb1e0 0%,#1675a1 100%);
+	background-image: -ms-linear-gradient(top,#4cb1e0 0%,#1675a1 100%);
+	background-image: linear-gradient(top,#4cb1e0 0%,#1675a1 100%);
+	/*-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;*/
+	-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 2px 1px rgba(0,0,0,0.3);
+	box-shadow: 0 2px 1px rgba(0,0,0,0.3);
+}
+
+ul.nav-h, ul.nav-h li {
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	line-height: normal;
+	direction: ltr;
+}
+
+.nav-h a {
+	/*padding: 8px 15px;*/
+	padding: 6px 15px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 23px;
+	font-family: "微软雅黑","PT Sans Narrow","Arial Narrow",Arial,Helvetica,sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+	/*text-shadow: 0 1px 0 rgba(0,0,0,0.3);*/
+}
+
+ul.nav-h a {
+	position: relative;
+	display: block;
+}
+
+.nav-h a:hover, .nav-h a:focus, .nav-h a:active, .nav-h a.highlighted {
+	background: #1983af;
+	background-image: url(css-gradients-fallback/main-item-hover-bg.png);
+	background-image: -moz-linear-gradient(top,#3FC1F9 0%,#0F9AD1 100%);
+	background-image: -webkit-gradient(linear,left top, left bottom,color-stop(0%,#3FC1F9),color-stop(100%,#0F9AD1));
+	background-image: -webkit-linear-gradient(top,#3FC1F9 0%,#0F9AD1 100%);
+	background-image: -o-linear-gradient(top,#3FC1F9 0%,#0F9AD1 100%);
+	background-image: -ms-linear-gradient(top,#3FC1F9 0%,#0F9AD1 100%);
+	background-image: linear-gradient(top,#3FC1F9 0%,#0F9AD1 100%);
+	color: #fff;
+}
+
+a.blueClass_hover{
+	background: #1983af;
+	background-image: -moz-linear-gradient(top,#34a2d0 0%,#006791 100%);
+	background-image: -webkit-gradient(linear,left top, left bottom,color-stop(0%,#34a2d0),color-stop(100%,#006791));
+	background-image: -webkit-linear-gradient(top,#34a2d0 0%,#006791 100%);
+	background-image: -o-linear-gradient(top,#34a2d0 0%,#006791 100%);
+	background-image: -ms-linear-gradient(top,#34a2d0 0%,#006791 100%);
+	background-image: linear-gradient(top,#34a2d0 0%,#006791 100%);
+	color: #fff;
+}
+
+.nav-h ul {
+	border: 1px solid #a9a9a9;
+	padding: 3px 0;
+	background: #fff;
+	-moz-border-radius: 0 0 4px 4px;
+	-webkit-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+	-moz-box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+	box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+	z-index:1000;
+}
+
+.nav-h ul a span.sub-arrow {
+	bottom: auto;
+	top: 50%;
+	margin-top: -5px;
+	right: 15px;
+	left: auto;
+	margin-left: 0;
+	
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border-width: 5px;
+	
+	border-style: dashed dashed dashed solid;
+	border-color: transparent transparent transparent #a4cde1;
+}
+
+.nav-h > li {
+border-left: 1px solid #1a8bb9;
+font-size: 15px;
+}
+
+.nav-h > li:first-child {
+border-left: none;
+}
+
+#header .nav-h ul {
+	/*box-shadow: 0 1px 4px rgba(0, 0, 0, .12);*/
+}
+
+.nav-h ul a {
+	/*padding: 9px 40px 8px 23px;*/
+	padding: 6px 40px 5px 23px;
+	background: transparent;
+	color: #247eab;
+	font-size: 15px;
+	text-shadow: none;
+	line-height:22px;
+}
+
+/* Navigation */
+
+#header .nav-h > li {
+float: left;
+
+background: url(../images/nav-sep.png) no-repeat left center;
+background: none;
+}
+
+.nav-pointer {
+position: relative;
+top: -1px;
+}
+
+
+#header .nav-h ul {
+background: #fff;
+border: 1px solid #d0d0d0;
+}
+
+#header .nav-h > li > ul {
+left: 0px;
+/*top: 27px;*/
+z-index: 999;
+}
+
+#header .nav-h ul a {
+border-top: 1px solid #eee;
+}
+
+#header .nav-h ul > li:first-child > a {
+border-top: 0;
+}
+
+
+.nav-h li {
+display: inline-block;
+*display: inline;
+position: relative;
+}
+
+.nav-h li a {
+display: inline-block;
+}
+
+.nav-h li ul {
+display: none;
+position: absolute;
+left: 0;
+top: 100%;
+}
+
+.nav-h li:hover > ul {
+display: block;
+}
+
+.nav-h ul li {
+display: block;
+}
+
+.nav-h ul li a {
+display: block;
+white-space: nowrap;
+}
+
+.nav-h li ul ul {
+	left: 100%;
+	/*top: -12px;*/
+	/*top: -20px;*/
+	top:-2px;
+}

@@ -1,0 +1,60 @@
+@CHARSET "utf-8";
+body{
+	background-color: #fff;
+}
+
+.easyDialog_wrapper .easyDialog_title {
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	color: #666;
+	padding: 0 10px;
+	font-size: 14px;
+	border-bottom: 1px solid #e5e5e5;
+	background: #f7f7f7;
+	border-radius: 4px 4px 0 0;
+	margin: 0px;
+}
+
+.easyDialog_wrapper{
+	/*width: 750px;*/
+}
+
+#jcrop_body{
+	position: fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0px;
+	display: none;
+}
+
+#div_body{
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0px;
+	background-color:rgba(255,255,255,0);
+}
+
+#tools{
+	position: fixed;
+	background-color: #fff;
+	top:-50px;
+	right: -120px;
+	/*width: 168px;*/
+	width: 246px;
+	padding:2px;
+	margin:0px;
+	z-index:999;
+}
+
+button {
+	padding: 1px 6px;
+	margin: auto 2px;
+}
+
+butlist{
+	float:right;
+}

@@ -1,0 +1,76 @@
+@CHARSET "utf-8";
+#chartTitle{
+	position: absolute;
+	top:35px;
+	left:0px;
+	height:20px;
+	right:0px;
+	text-align: center;
+	vertical-align: middle;
+	font-family: "微软雅黑";
+	color: #1675a1;
+	font-size: 19px;
+	font-weight:bold;
+}
+	
+#chartdiv{
+	position: absolute;
+	top:50px;
+	bottom:0px;
+	left: 0px;
+	right:0px; 
+	padding:0px;
+}
+
+#chart-tools{
+/*	border-left:1px solid #3399ff;*/
+	position: absolute;
+	top:30px;
+	bottom:0px;
+	width: 200px;
+	right:0px; 
+	padding:0px;
+	white-space: normal;
+	overflow: hidden;
+/*	border-radius:7px;*/
+}
+
+#chart-tools:after{content:"."}
+
+#toolTitle{
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+	/*background-color: #3399ff;*/
+	background-image:url(../images/searchbg1.png);
+	color: white;
+	padding: 0px;
+	height:30px;
+	line-height:1.9;
+}
+
+.list-unit{
+	padding: 0px;
+	margin: 0px;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 14px;
+	position: relative;
+	top: -10px;
+}
+
+.list-unit-top{
+	line-height: 22px;
+	padding-left: 5px;
+}
+
+.choice_scope{
+	height:35%;
+	overflow-y:auto;
+	background-color:#f7fafd;
+}
+
+.wangjingyan{
+background-color:#dff3fd;
+height:24px;
+border:solid 1px #e0e1e1;}

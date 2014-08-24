@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<import resource="applicationContext_login.xml"/>
+	<import resource="applicationContext_dataSource.xml"/>
+	<bean id="db" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url" value="jdbc:mysql://localhost:3306/datavisual"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="123456"></property>
+	</bean>
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="db" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+		<list>
+		    <value>com/dv/entity/User.hbm.xml</value>
+		    <value>com/dv/entity/Filedataset.hbm.xml</value>
+		    <value>com/dv/entity/Dbdataset.hbm.xml</value>
+		</list>    
+		</property>		
+	</bean>
+	
+	
+	
+	</beans>

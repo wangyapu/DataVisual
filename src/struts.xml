@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.i18n.encoding" value="UTF-8" />
+<constant name="struts.ui.theme" value="simple" />
+<constant name="struts.objectFactory" value="spring" />
+<constant name="struts.multipart.saveDir" value="d:/temp" />
+<constant name="struts.custom.i18n.resources" value="MessageResource"/>
+
+
+<include file="struts_login.xml" />
+<include file="struts_dataSource.xml" />
+<include file="struts_datamining.xml" />
+<include file="struts_common.xml" />
+<include file="struts_export.xml" />
+</struts>

@@ -1,0 +1,172 @@
+@CHARSET "utf-8";
+.logincontent{
+	float:right;	
+}
+
+.main-search-panel{
+	margin-top:5px;
+	width: 204px;
+	/*height: 504px;*/
+}
+
+#showandhidden{
+	position: absolute;
+	left: 220px;
+	top: 250px;
+	z-index: 199;
+	height: 60px;
+	width: 5px;
+	background: url(../images/icon/arrowright.png) repeat-x 50% 0;
+}
+
+#table-chart{
+	position: absolute;
+	top:114px;
+	bottom:1px;
+	right: 1px;
+	/*left: 210px;*/
+	left: 225px;
+	background:#fff;
+}
+
+.tableTitle{
+	display:block;
+	width: 100%;
+	text-align: center;	
+}
+
+.tableUnit{
+	display:block;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	margin-top: 5px;
+	font-family: "微软雅黑";
+	color: #2e6b9b;
+}
+
+#tableShow{
+	position: absolute;
+	top:27px;
+	bottom:0px;
+	left: 0px;
+	right:0px; 
+	border:1px solid #ccc;
+	border-bottom: none;
+	border-top:none;	
+	margin-bottom:0px;
+	padding-left:2px;
+	padding-right:2px;
+	text-align:center;
+	overflow-x:auto;
+	overflow-y:inherit;
+}
+
+#chartShow{
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	left: 0px;
+	right:0px; 
+	border:1px solid #ccc;
+	border-top:none;	
+	margin-bottom:0px;
+}
+
+.control_tab{
+	/*overflow-y: auto;
+	overflow-x: hidden;*/
+	height: inherit;
+	position:relative;
+
+}
+
+.tabStyle{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+#tool-table{
+	position:absolute;
+	z-index:99;
+	height:25px;
+	top: 116px;
+	right: 1px;
+}
+
+#tool-table select{
+	position: relative;
+	top: -6px;
+	height: 26px;
+	border: solid 1px #dfce9f;
+	background-color:#F7FBFE;
+}
+
+#tool-table span{
+	position: relative;
+	top: -2px;
+	height: 27px;
+	font-size: 15px;
+	font-family: '黑体';
+	font-weight: bold;
+	color: #2b577a;
+}
+
+
+#tool-jsyj{
+	/*position: absolute;
+	z-index: 99;
+	height: 55px;
+	top: 132px;
+	right: 1px;
+	left: 210px;
+	padding-left: 160px;*/
+	
+	position: absolute;
+	z-index: 99;
+	height: 55px;
+	top: 116px;
+	right: 1px;
+	/* left: 210px; */
+	padding-left: 160px;
+}
+
+.searching{
+	background:url(../images/icon/chaxun2.png) no-repeat 415px 128px;
+	
+	height:180px;
+	width:500px;
+	postion:relative;
+	top:200px;
+	
+
+}
+.searchingfont{
+	font-size:24px;
+	font-family:'黑体';
+	font-weight:bold;
+	color：rgb(230,230,230);
+	position:absolute;
+	top:132px;
+	left:460px;
+
+	
+}.nofound{
+	background:url(../images/icon/noavailable.png) no-repeat 455px 130px;
+	
+	height:180px;
+	width:500px;
+	postion:relative;
+	top:200px;
+	
+}
+.nofoundfont{
+	font-size:24px;
+	font-family:'黑体';
+	font-weight:bold;
+	color：rgb(230,230,230);
+	position:absolute;
+	top:140px;
+	left:505px;
+}

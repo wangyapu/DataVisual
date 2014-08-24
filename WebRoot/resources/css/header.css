@@ -1,0 +1,207 @@
+@CHARSET "utf-8";
+body{
+	position:fixed;
+	top:0px;
+	width:100%;
+	/*background: url(../images/pointbg.png) repeat-x 0px 0px;*/
+	background: url(../images/pointbg.png);
+	-moz-background-size:cover; /* 老版本的 Firefox */
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+	border-bottom: 1px solid white;
+	z-index: -1;
+}
+div.content:after{
+	content: ".";	
+}
+
+#commonheader{
+	position:fixed;
+	top:0px;
+	width:100%;
+	height:70px;
+	/*background: url(../images/top.png) repeat-x 0px 0px;*/
+	background: url(../images/headbgV02.png);
+	-moz-background-size:100% 70px; /* 老版本的 Firefox */
+	background-size:100% 70px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+	border-bottom: 1px solid white;
+	z-index: -1;
+}
+
+#leftmenu{
+	/*z-index:-1;*/
+	position:fixed;
+	width: 105px;
+	top: 71px;
+	bottom: 31px;
+	border:1px solid gray;
+	border-top:none;
+	/*background:-webkit-gradient(linear,0 0,0 100%,from(＃2074af), to(＃2c91d2));*/
+	/*background:-webkit-gradient(linear,0% 0%,100% 100%,
+								color-stop(0,rgba(113,113,113,1)),
+								color-stop(0.5,rgba(135,135,135,0.7)),
+								color-stop(1,rgba(244,244,244,0.4)));*/
+	/*background: -webkit-gradient(linear,0% 0%,100% 100%, color-stop(0,rgba(28,103,205,1)), color-stop(0.5,rgba(28,103,205,0.9)), color-stop(1,rgba(28,103,205,0.8)));*/
+	background: -webkit-gradient(linear,0% 0%,100% 100%, color-stop(0,rgba(26,122,166,1)), color-stop(0.5,rgba(26,122,166,0.9)), color-stop(1,rgba(26,122,166,0.8)));
+}
+
+#content_template_old{
+	position:fixed;
+	top:70px;
+	right:0px;
+	bottom:28px;
+	left:107px;
+	border-left:none;
+	overflow-x: auto;
+	overflow-y: scroll;
+}
+
+#content_template{
+	position:absolute;
+	top:70px;
+	right:0px;
+	left:107px;
+	height:1000px;
+	border-left:none;
+	overflow-x: auto;
+	overflow-y: scroll;
+	z-index: -1;
+}
+
+#bottom{
+	position:fixed;
+	bottom:0px;
+	width:100%;
+	height:30px;
+	/*background: url(../images/top.png) repeat-x 0px 0px;*/
+	background: url(../images/footbgV03.png);
+	-moz-background-size:100% 30px; /* 老版本的 Firefox */
+	background-size:100% 30px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+	border-top: 1px solid white;
+	z-index: -1;
+}
+
+#upload{
+		width:105pxpx;
+		height:100px;
+		padding:12px;
+		padding-top:6px;
+		background: url(../images/leftMenu/upload.png);
+		-moz-background-size:80px 70px; /* 老版本的 Firefox */
+		background-size:80px 70px;
+		background-repeat:no-repeat;
+		background-origin:content-box;
+}
+#upload:hover{
+	background: url(../images/leftMenu/upload_hover.png);
+	-moz-background-size:80px 70px; /* 老版本的 Firefox */
+	background-size:80px 70px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+	cursor: pointer;
+	/*-webkit-transition: background .25s linear; */
+}
+
+#choose{
+		width:105pxpx;
+		height:100px;
+		padding:12px;
+		padding-top:6px;
+		background: url(../images/leftMenu/choose.png);
+		-moz-background-size:80px 70px; /* 老版本的 Firefox */
+		background-size:80px 70px;
+		background-repeat:no-repeat;
+		background-origin:content-box;
+}
+#choose:hover{
+	background: url(../images/leftMenu/choose_hover.png);
+	-moz-background-size:80px 70px; /* 老版本的 Firefox */
+	background-size:80px 70px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+	cursor: pointer;
+	/*-webkit-transition: background .25s linear; */
+}
+
+#preprocess{
+		width:105pxpx;
+		height:100px;
+		padding:12px;
+		padding-top:6px;
+		background: url(../images/leftMenu/preprocess.png);
+		-moz-background-size:80px 70px; /* 老版本的 Firefox */
+		background-size:80px 70px;
+		background-repeat:no-repeat;
+		background-origin:content-box;
+}
+#preprocess:hover{
+	background: url(../images/leftMenu/preprocess_hover.png);
+	-moz-background-size:80px 70px; /* 老版本的 Firefox */
+	background-size:80px 70px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+	cursor: pointer;
+	/*-webkit-transition: background .25s linear; */
+}
+
+#analyse{
+		width:105pxpx;
+		height:100px;
+		padding:12px;
+		padding-top:6px;
+		background: url(../images/leftMenu/analyse.png);
+		-moz-background-size:80px 70px; /* 老版本的 Firefox */
+		background-size:80px 70px;
+		background-repeat:no-repeat;
+		background-origin:content-box;
+}
+#analyse:hover{
+	background: url(../images/leftMenu/analyse_hover.png);
+	-moz-background-size:80px 70px; /* 老版本的 Firefox */
+	background-size:80px 70px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+	cursor: pointer;
+	/*-webkit-transition: background .25s linear; */
+}
+#other{
+		width:105pxpx;
+		height:100px;
+		padding:12px;
+		padding-top:6px;
+		background: url(../images/leftMenu/othercase.png);
+		-moz-background-size:80px 70px; /* 老版本的 Firefox */
+		background-size:80px 70px;
+		background-repeat:no-repeat;
+		background-origin:content-box;
+}
+#other:hover{
+	background: url(../images/leftMenu/othercase_hover.png);
+	-moz-background-size:80px 70px; /* 老版本的 Firefox */
+	background-size:80px 70px;
+	background-repeat:no-repeat;
+	background-origin:content-box;
+	cursor: pointer;
+	/*-webkit-transition: background .25s linear; */
+}
+
+#upload span,#choose span,#preprocess span,#analyse span,#other span{
+	position: relative;
+	top: 60px;
+	font-family: '黑体';
+	color:white;
+	font-size: 14px;
+}
+
+#upload:hover span,#choose:hover span,#preprocess:hover span,#analyse:hover span,#other:hover span{
+	color:rgb(3,82,151);
+	cursor: pointer;
+	-webkit-transition: color .25s linear; 
+}
+
+	

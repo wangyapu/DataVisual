@@ -1,0 +1,15 @@
+#Thu Aug 07 09:45:19 CST 2014
+eclipse.preferences.version=1
+encoding//WebRoot/resources/datavjs/examples/force/DataExample.csv=UTF-8
+encoding//src/com/dv/action/Association.java=UTF-8
+encoding//src/com/dv/action/Cluster.java=UTF-8
+encoding//src/com/dv/action/ExportAction.java=UTF-8
+encoding//src/com/dv/action/LoginAction.java=UTF-8
+encoding//src/com/dv/action/NetWork.java=UTF-8
+encoding//src/com/dv/action/base/DataSourceBaseAction.java=UTF-8
+encoding//src/com/dv/action/base/LoginBaseAction.java=UTF-8
+encoding//src/com/dv/util/StaticData.java=UTF-8
+encoding//src/com/dv/util/UserLoginFilter.java=GBK
+encoding/<project>=UTF-8
+encoding/WebRoot=UTF-8
+encoding/src=UTF-8

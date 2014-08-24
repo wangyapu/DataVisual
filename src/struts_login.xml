@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="userlogin" extends="struts-default">
+		<action name="userlogin" class="com.dv.action.LoginAction" method="userLogin">
+			<result name="success">/dataSource/datasetUpload.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		
+		<action name="test" class="com.dv.action.TestJRI" method="testjri">
+			<result name="success">/index.jsp</result>
+		</action>
+		
+		<action name="logout" class="com.dv.action.LoginAction" method="logout">
+			<result name="success">/login.jsp</result>
+		</action>
+	</package>	
+	
+	
+	<package name="LoadLibs" extends="json-default">
+		<action name="loadLibs" class="com.dv.action.LoginAction" method="loadLibs">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+	
+	
+</struts>
