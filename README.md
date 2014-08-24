@@ -27,6 +27,18 @@ DataVisual
 
  ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/缺失值处理.png)
  
-   缺失值预览——可以任意剔除和修改缺失值
+ 缺失值预览——可以任意剔除和修改缺失值
    
  ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/缺失值预览.png)
+ 
+ 缺失值统一替换
+ 
+ ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/缺失值处理完成.png)
+
+6、数据统计——条形图
+
+ ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/统计信息—条形图.png)
+ 
+  数据统计——折线图
+  
+   ![image](https://github.com/shuiying/DataVisual/raw/master/readmeimg/统计信息—折线图.png)
