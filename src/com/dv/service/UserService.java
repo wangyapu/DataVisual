@@ -1,14 +1,12 @@
 package com.dv.service;
 
-import java.util.List;
-
 import com.dv.entity.User;
 
-
+import java.util.List;
 
 
 public interface UserService {
 
-	List<User> allowLogin(String username, String password);
-	
+    List<User> allowLogin(String username, String password);
+
 }

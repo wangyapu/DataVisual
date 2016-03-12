@@ -4,91 +4,90 @@ package com.dv.util;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class PageUtil implements Serializable{
-	
-	private int totalpage;
-	private int pageno; 
-	private int prepageno; 
-	private int nextpageno; 
-	private int pagesize; 
-	private int totalnum;
-	public int getNextpageno() {
-		return nextpageno;
-	}
+public class PageUtil implements Serializable {
 
-	public void setNextpageno(int nextpageno) {
-		this.nextpageno = nextpageno;
-	}
+    private int totalpage;
+    private int pageno;
+    private int prepageno;
+    private int nextpageno;
+    private int pagesize;
+    private int totalnum;
 
-	public int getPageno() {
-		return pageno;
-	}
+    public int getNextpageno() {
+        return nextpageno;
+    }
 
-	public void setPageno(int pageno) {
-		this.pageno = pageno;
-	}
+    public void setNextpageno(int nextpageno) {
+        this.nextpageno = nextpageno;
+    }
 
-	public int getPagesize() {
-		return pagesize;
-	}
+    public int getPageno() {
+        return pageno;
+    }
 
-	public void setPagesize(int pagesize) {
-		this.pagesize = pagesize;
-	}
+    public void setPageno(int pageno) {
+        this.pageno = pageno;
+    }
 
-	public int getPrepageno() {
-		return prepageno;
-	}
+    public int getPagesize() {
+        return pagesize;
+    }
 
-	public void setPrepageno(int prepageno) {
-		this.prepageno = prepageno;
-	}
+    public void setPagesize(int pagesize) {
+        this.pagesize = pagesize;
+    }
 
-	public int getTotalpage() {
-		return totalpage;
-	}
+    public int getPrepageno() {
+        return prepageno;
+    }
 
-	public void setTotalpage(int totalpage) {
-		this.totalpage = totalpage;
-	}
+    public void setPrepageno(int prepageno) {
+        this.prepageno = prepageno;
+    }
 
-	public int getTotalnum() {
-		return totalnum;
-	}
+    public int getTotalpage() {
+        return totalpage;
+    }
 
-	public void setTotalnum(int totalnum) {
-		this.totalnum = totalnum;
-	}
-	
-	
-	public PageUtil(String spageno, int totalnum, int pagesize) {
-		this.pagesize = pagesize;
-		this.totalnum = totalnum;
+    public void setTotalpage(int totalpage) {
+        this.totalpage = totalpage;
+    }
 
-		
-		pageno = 1;
+    public int getTotalnum() {
+        return totalnum;
+    }
+
+    public void setTotalnum(int totalnum) {
+        this.totalnum = totalnum;
+    }
+
+
+    public PageUtil(String spageno, int totalnum, int pagesize) {
+        this.pagesize = pagesize;
+        this.totalnum = totalnum;
+
+
+        pageno = 1;
         if (spageno != null)
-			pageno = Integer.parseInt(spageno);
-		
-		
-		totalpage = totalnum % pagesize == 0 ? (totalnum / pagesize) : (totalnum
-				/ pagesize + 1);
-		
-		
-		if (pageno >= totalpage){
-			pageno = totalpage;
-			nextpageno = pageno;
-		}
-		else{
-			nextpageno = pageno + 1;
-		}
-		if (pageno <= 1){
-			pageno = 1;
-			prepageno = pageno;
-		}
-		else{
-			prepageno = pageno - 1;
-		}
-		
-	}
+            pageno = Integer.parseInt(spageno);
+
+
+        totalpage = totalnum % pagesize == 0 ? (totalnum / pagesize) : (totalnum
+                / pagesize + 1);
+
+
+        if (pageno >= totalpage) {
+            pageno = totalpage;
+            nextpageno = pageno;
+        } else {
+            nextpageno = pageno + 1;
+        }
+        if (pageno <= 1) {
+            pageno = 1;
+            prepageno = pageno;
+        } else {
+            prepageno = pageno - 1;
+        }
+
+    }
 }

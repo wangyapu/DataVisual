@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class ToolsFactory {
 
-	public static boolean isNumeric(String str) {
+    public static boolean isNumeric(String str) {
         int begin = 0;
         boolean once = true;
         if (str == null || str.trim().equals("")) {
@@ -24,8 +24,7 @@ public class ToolsFactory {
             if (!Character.isDigit(str.charAt(i))) {
                 if (str.charAt(i) == '.' && once) {
                     once = false;
-                }
-                else {
+                } else {
                     return false;
                 }
             }
@@ -36,40 +35,37 @@ public class ToolsFactory {
         return true;
     }
 
-	
-	public static String[] getColType(String filePath,String hasheadline,String separator,String missing,int num){
-		String coltypes[]=new String[num];
-		File file = new File(filePath);
+
+    public static String[] getColType(String filePath, String hasheadline, String separator, String missing, int num) {
+        String coltypes[] = new String[num];
+        File file = new File(filePath);
         BufferedReader reader = null;
         try {
             reader = new BufferedReader(new FileReader(file));
             String tempString = null;
-            if(hasheadline.equals("T")){
-            	reader.readLine();
-            }	
+            if (hasheadline.equals("T")) {
+                reader.readLine();
+            }
             while ((tempString = reader.readLine()) != null) {
-                	if(!tempString.contains(missing)){
-                		if(separator.equals("")){
-                			if(ToolsFactory.isNumeric(tempString.trim())){
-                				coltypes[0]="N";
-                			}
-                			else{
-                				coltypes[0]="S";
-                			}
-                		}
-                		else{
-	                		String[] temp=tempString.split(separator);
-	                    	for(int i=0;i<temp.length;i++){
-	                    		if(ToolsFactory.isNumeric(temp[i].trim())){
-	                    			coltypes[i]="N";
-	                    		}
-	                    		else{
-	                    			coltypes[i]="S";
-	                    		}
-	                    	}
-                		}
-                    	break;
-                	}
+                if (!tempString.contains(missing)) {
+                    if (separator.equals("")) {
+                        if (ToolsFactory.isNumeric(tempString.trim())) {
+                            coltypes[0] = "N";
+                        } else {
+                            coltypes[0] = "S";
+                        }
+                    } else {
+                        String[] temp = tempString.split(separator);
+                        for (int i = 0; i < temp.length; i++) {
+                            if (ToolsFactory.isNumeric(temp[i].trim())) {
+                                coltypes[i] = "N";
+                            } else {
+                                coltypes[i] = "S";
+                            }
+                        }
+                    }
+                    break;
+                }
             }
             reader.close();
         } catch (IOException e) {
@@ -83,5 +79,5 @@ public class ToolsFactory {
             }
         }
         return coltypes;
-	}
+    }
 }
