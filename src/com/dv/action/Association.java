@@ -54,11 +54,13 @@ public class Association extends DataMiningBaseAction {
                 "dev.off();" +
                 "}");
         c.eval("allrules<-as(rules,'data.frame')");
+
         String colnames[] = (String[]) session.get("colnames");
         matrixcols = "";
         colsnum = "";
         String[] namestemp;
         int[] numtemp;
+
         for (int i = 0; i < colnames.length; i++) {
             namestemp = c.eval("names(table(data[," + (i + 1) + "]))").asStringArray();
             numtemp = c.eval("table(data[," + (i + 1) + "])").asIntArray();
@@ -71,12 +73,15 @@ public class Association extends DataMiningBaseAction {
         colsnum = colsnum.substring(0, colsnum.length() - 1);
         RFactor rf = c.eval("allrules[,1]").asFactor();
         allrules = new String[rf.size()];
+
         for (int i = 0; i < rf.size(); i++) {
             allrules[i] = rf.at(i);
         }
+
         aprinfo = c.eval("as.matrix(allrules[,c(2,3,4)])").asDoubleMatrix();
         c.eval("rm('rules')");
         c.eval("rm('allrules')");
+
         return "apriori";
     }
 

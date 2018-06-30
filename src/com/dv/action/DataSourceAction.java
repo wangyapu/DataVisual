@@ -125,10 +125,6 @@ public class DataSourceAction extends DataSourceBaseAction {
 
         c.eval("rm(list=ls()");
 
-		/*if(missing==null)
-        {
-			c.eval("data<-read.table('"+filePath+"',header="+hasheadline+",sep='')");
-		}*/
         if (filedatasize < 4) {
             System.out.println("read.table");
             picture = "true";
@@ -143,7 +139,7 @@ public class DataSourceAction extends DataSourceBaseAction {
                     datacolnames[i] = colnames[i - 1];
                 }
             }
-            //Map<String,Object> session=ActionContext.getContext().getSession();
+
             session.remove("colnames");
             session.put("colnames", colnames);
             String coltypes[] = ToolsFactory.getColType(filePath, hasheadline, separator, missing, colnames.length);
@@ -212,7 +208,7 @@ public class DataSourceAction extends DataSourceBaseAction {
                     datacolnames[i] = colnames[i - 1];
                 }
             }
-            //Map<String,Object> session=ActionContext.getContext().getSession();
+
             session.remove("colnames");
             session.put("colnames", colnames);
             String coltypes[] = ToolsFactory.getColType(filePath, hasheadline, separator, missing, colnames.length);

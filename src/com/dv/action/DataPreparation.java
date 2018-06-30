@@ -42,6 +42,7 @@ public class DataPreparation extends DataMiningBaseAction {
         double missingratio[] = new double[colnames.length];
         totalrow = c.eval("length(data[,1])").asInt();
         String[] missarray = missinput.split(";");
+
         for (int i = 0; i < rowids.length; i++) {
             for (int j = 0; j < colnames.length; j++) {
                 if (c.eval("is.factor(data[" + rowids[i] + "," + (j + 1) + "])").asBool().equals("FALSE")) {
@@ -104,8 +105,8 @@ public class DataPreparation extends DataMiningBaseAction {
         Rengine c = sd.re;
         Map<String, Object> session = ActionContext.getContext().getSession();
         String colnames[] = (String[]) session.get("colnames");
-        if (c.eval("{data}") == null || colnames == null) {
-        } else if (c.eval("{data}") != null && colnames != null) {
+
+        if (c.eval("{data}") != null && colnames != null) {
             totalrow = c.eval("length(data[,1])").asInt();
             for (int i = 0; i < totalrow; i++) {
                 for (int j = 0; j < colnames.length; j++) {
@@ -125,6 +126,7 @@ public class DataPreparation extends DataMiningBaseAction {
                 }
             }
         }
+
         return SUCCESS;
     }
 
@@ -135,8 +137,8 @@ public class DataPreparation extends DataMiningBaseAction {
         Rengine c = sd.re;
         Map<String, Object> session = ActionContext.getContext().getSession();
         String colnames[] = (String[]) session.get("colnames");
-        if (c.eval("{data}") == null || colnames == null) {
-        } else if (c.eval("{data}") != null && colnames != null) {
+
+        if (c.eval("{data}") != null && colnames != null) {
             totalrow = c.eval("length(data[,1])").asInt();
             for (int i = 0; i < totalrow; i++) {
                 for (int j = 0; j < colnames.length; j++) {
@@ -166,19 +168,24 @@ public class DataPreparation extends DataMiningBaseAction {
         Rengine c = sd.re;
         String colids[] = ids.split(",");
 
-        for (int i = 0; i < colids.length; i++) {
-            if (method.equals("prior")) {
-                c.eval("data[," + colids[i] + "]<-na.locf(data[," + colids[i] + "],fromLast=F)");
-            } else if (method.equals("mean")) {
-                c.eval("{data[," + colids[i] + "]<-as.double(as.character(data[," + colids[i] + "]));" +
-                        "data[," + colids[i] + "][which(is.na(data[," + colids[i] + "]))]<-mean(data[," + colids[i] + "][-which(is.na(data[," + colids[i] + "]))]);" +
-                        "}");
-            } else if (method.equals("spline")) {
-                c.eval("{data[," + colids[i] + "]<-as.double(as.character(data[," + colids[i] + "]));" +
-                        "data[," + colids[i] + "]<-na.spline(data[," + colids[i] + "],na.rm=TRUE);" +
-                        "}");
+        for (String colid : colids) {
+            switch (method) {
+                case "prior":
+                    c.eval("data[," + colid + "]<-na.locf(data[," + colid + "],fromLast=F)");
+                    break;
+                case "mean":
+                    c.eval("{data[," + colid + "]<-as.double(as.character(data[," + colid + "]));" +
+                            "data[," + colid + "][which(is.na(data[," + colid + "]))]<-mean(data[," + colid + "][-which(is.na(data[," + colid + "]))]);" +
+                            "}");
+                    break;
+                case "spline":
+                    c.eval("{data[," + colid + "]<-as.double(as.character(data[," + colid + "]));" +
+                            "data[," + colid + "]<-na.spline(data[," + colid + "],na.rm=TRUE);" +
+                            "}");
+                    break;
             }
         }
+
         Map<String, Object> session = ActionContext.getContext().getSession();
         String colnames[] = (String[]) session.get("colnames");
         String coltypes[] = (String[]) session.get("coltypes");
@@ -186,6 +193,7 @@ public class DataPreparation extends DataMiningBaseAction {
         double missingratio[] = new double[colnames.length];
         totalrow = c.eval("length(data[,1])").asInt();
         DecimalFormat df = new DecimalFormat("##.##");
+
         for (int i = 0; i < colnames.length; i++) {
             missingnum[i] = c.eval("sum(is.na(data[," + (i + 1) + "]))").asInt();
             missingratio[i] = (double) missingnum[i] / (double) totalrow;
@@ -212,61 +220,67 @@ public class DataPreparation extends DataMiningBaseAction {
                 "#99CC33", "#3F9337", "#219167", "#24998D", "#1F9BAA",
                 "#A1488E", "#C71585", "#BD2158", "#CCFFFF", "#FFCCCC",
                 "#33FF99", "#FF95CA", "#00FFFF", "#FF5809", "#1AFD9C"};
-        if (method.equals("bar")) {
-            for (int i = 0; i < colids.length; i++) {
-                statdata.add(c.eval("data[," + colids[i] + "]").asDoubleArray());
-            }
-        } else if (method.equals("breakline")) {
-            for (int i = 0; i < colids.length; i++) {
-                statdata.add(c.eval("data[," + colids[i] + "]").asDoubleArray());
-            }
-        } else if (method.equals("scatter")) {
-            for (int i = 0; i < colids.length; i++) {
-                for (int j = 0; j < colids.length; j++) {
-                    if (i != j) {
-                        int[] temp = new int[2];
-                        temp[0] = Integer.parseInt(colids[i]);
-                        temp[1] = Integer.parseInt(colids[j]);
-                        varname.add(temp);
-                        scatterdata.add(c.eval("as.matrix(data[,c(" + colids[i] + "," + colids[j] + ")])").asDoubleMatrix());
-                    }
+        switch (method) {
+            case "bar":
+                for (String colid : colids) {
+                    statdata.add(c.eval("data[," + colid + "]").asDoubleArray());
                 }
-            }
-        } else if (method.equals("scatter3d")) {
-            for (int i = 0; i < colids.length; i++) {
-                for (int j = 0; j < colids.length; j++) {
-                    for (int k = 0; k < colids.length; k++) {
-                        if (i != j && i != k && j != k && i < j && j < k) {
-                            int[] temp = new int[3];
+                break;
+            case "breakline":
+                for (int i = 0; i < colids.length; i++) {
+                    statdata.add(c.eval("data[," + colids[i] + "]").asDoubleArray());
+                }
+                break;
+            case "scatter":
+                for (int i = 0; i < colids.length; i++) {
+                    for (int j = 0; j < colids.length; j++) {
+                        if (i != j) {
+                            int[] temp = new int[2];
                             temp[0] = Integer.parseInt(colids[i]);
                             temp[1] = Integer.parseInt(colids[j]);
-                            temp[2] = Integer.parseInt(colids[k]);
                             varname.add(temp);
-                            scatterdata3d.add(c.eval("as.matrix(data[,c(" + colids[i] + "," + colids[j] + "," + colids[k] + ")])").asDoubleMatrix());
+                            scatterdata.add(c.eval("as.matrix(data[,c(" + colids[i] + "," + colids[j] + ")])").asDoubleMatrix());
                         }
                     }
-
                 }
-            }
-        } else if (method.equals("box")) {
-            double fivearray[];
-            double outarray[];
-            double fivenum[][] = new double[colids.length][5];
-            for (int i = 0; i < colids.length; i++) {
-                fivearray = c.eval("fivenum(data[," + colids[i] + "])").asDoubleArray();
-                outarray = c.eval("boxplot.stats(data[," + colids[i] + "])$out").asDoubleArray();
-                fivenum[i] = fivearray;
-                System.out.println(outarray.length);
-                if (outarray.length > 0) {
-                    double outpoint[][] = new double[outarray.length][2];
-                    for (int j = 0; j < outarray.length; j++) {
-                        outpoint[j] = new double[]{i, outarray[j]};
+                break;
+            case "scatter3d":
+                for (int i = 0; i < colids.length; i++) {
+                    for (int j = 0; j < colids.length; j++) {
+                        for (int k = 0; k < colids.length; k++) {
+                            if (i != j && i != k && j != k && i < j && j < k) {
+                                int[] temp = new int[3];
+                                temp[0] = Integer.parseInt(colids[i]);
+                                temp[1] = Integer.parseInt(colids[j]);
+                                temp[2] = Integer.parseInt(colids[k]);
+                                varname.add(temp);
+                                scatterdata3d.add(c.eval("as.matrix(data[,c(" + colids[i] + "," + colids[j] + "," + colids[k] + ")])").asDoubleMatrix());
+                            }
+                        }
+
                     }
-                    outlier.add(outpoint);
                 }
-            }
+                break;
+            case "box":
+                double fivearray[];
+                double outarray[];
+                double fivenum[][] = new double[colids.length][5];
+                for (int i = 0; i < colids.length; i++) {
+                    fivearray = c.eval("fivenum(data[," + colids[i] + "])").asDoubleArray();
+                    outarray = c.eval("boxplot.stats(data[," + colids[i] + "])$out").asDoubleArray();
+                    fivenum[i] = fivearray;
+                    System.out.println(outarray.length);
+                    if (outarray.length > 0) {
+                        double outpoint[][] = new double[outarray.length][2];
+                        for (int j = 0; j < outarray.length; j++) {
+                            outpoint[j] = new double[]{i, outarray[j]};
+                        }
+                        outlier.add(outpoint);
+                    }
+                }
 
-            scatterdata.add(fivenum);
+                scatterdata.add(fivenum);
+                break;
         }
 
         return SUCCESS;
@@ -277,8 +291,9 @@ public class DataPreparation extends DataMiningBaseAction {
         sd.setAr();
         Rengine c = sd.re;
         String colids[] = ids.split(",");
-        for (int i = 0; i < colids.length; i++) {
-            statdata.add(c.eval("data[," + colids[i] + "]").asDoubleArray());
+
+        for (String colid : colids) {
+            statdata.add(c.eval("data[," + colid + "]").asDoubleArray());
         }
         return SUCCESS;
     }
@@ -289,8 +304,9 @@ public class DataPreparation extends DataMiningBaseAction {
         Rengine c = sd.re;
         String colids[] = ids.split(",");
         double[] strVoid = null;
-        for (int i = 0; i < colids.length; i++) {
-            strVoid = c.eval("data[," + colids[i] + "]").asDoubleArray();
+
+        for (String colid : colids) {
+            strVoid = c.eval("data[," + colid + "]").asDoubleArray();
             statdata.add(new QuickSort().quickSort(strVoid, 0, strVoid.length - 1));
         }
         return SUCCESS;

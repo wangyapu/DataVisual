@@ -55,11 +55,13 @@ public class Classification extends DataMiningBaseAction {
         Map<String, Object> session = ActionContext.getContext().getSession();
         String colnames[] = (String[]) session.get("colnames");
         String colids[] = ids.split(",");
-        String inputline = "";
-        for (int i = 0; i < colids.length; i++) {
-            inputline += colnames[Integer.parseInt(colids[i]) - 1] + "+";
+        StringBuilder inputline = new StringBuilder();
+
+        for (String colid : colids) {
+            inputline.append(colnames[Integer.parseInt(colid) - 1]).append("+");
         }
-        inputline = inputline.substring(0, inputline.length() - 1);
+
+        inputline = new StringBuilder(inputline.substring(0, inputline.length() - 1));
         StaticData sd = StaticData.getInstance();
         sd.setAr();
         Rengine c = sd.re;
@@ -73,9 +75,10 @@ public class Classification extends DataMiningBaseAction {
                 "dev.off();" +
                 "}");
         acc = c.eval("acc<-mmetric(data$" + outputline + ",dtreep,'ACC')").asDouble();
+
         double[][] dtreepredict = c.eval("dtreep").asDoubleMatrix();
         pnames = c.eval("names(data.frame(dtreep))").asStringArray();
-        System.out.println(pnames[0]);
+
         int length = dtreepredict.length > 20 ? 20 : dtreepredict.length;
         tempArrays = new double[20][pnames.length];
         for (int i = 0; i < length; i++) {
@@ -105,6 +108,7 @@ public class Classification extends DataMiningBaseAction {
 
         c.eval("rm('dtreemodel')");
         c.eval("rm('dtreep')");
+
         return "dtree";
     }
 
